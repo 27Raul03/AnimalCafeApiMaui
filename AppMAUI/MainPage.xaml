@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppMAUI.MainPage">
+
+    <Grid>
+        <Image
+    Source="animal_cafe.png"
+    Aspect="AspectFill"
+    Opacity="0.3"
+    HorizontalOptions="FillAndExpand"
+    VerticalOptions="FillAndExpand" />
+
+        <VerticalStackLayout
+    HorizontalOptions="Center"
+    VerticalOptions="Center"
+    Padding="30"
+    Spacing="20"
+    BackgroundColor="#FFFFFF"
+    Opacity="0.7"
+    WidthRequest="300"
+    HeightRequest="250"
+    >
+
+            <Label
+        Text="Welcome to Animal Cafe!"
+        FontSize="28"
+        TextColor="#6D4C41"
+        FontAttributes="Bold"
+        HorizontalTextAlignment="Center" />
+
+            <Label
+        Text="Enjoy your time with our furry friends."
+        FontSize="16"
+        TextColor="#8D6E63"
+        HorizontalTextAlignment="Center" />
+
+
+        </VerticalStackLayout>
+    </Grid>
+
+</ContentPage>
