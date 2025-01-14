@@ -19,6 +19,7 @@ namespace AppMAUI
             builder.Services.AddSingleton<IRestService, RestService>();
             builder.Services.AddTransient<ProductPage>();
             builder.Services.AddTransient<AnimalPage>();
+            builder.Services.AddTransient<ClientPage>();
 
             return builder.Build();
         }

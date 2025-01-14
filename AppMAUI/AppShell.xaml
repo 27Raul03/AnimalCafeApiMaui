@@ -17,6 +17,10 @@
                       Title="Animals"
                       ContentTemplate="{DataTemplate local:AnimalPage}"
                       Route="AnimalPage" />
+        <ShellContent
+                      Title="Clients"
+                      ContentTemplate="{DataTemplate local:ClientPage}"
+                      Route="CLientPage" />
     </TabBar>
 
 </Shell>
