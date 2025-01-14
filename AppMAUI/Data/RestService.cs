@@ -69,19 +69,19 @@ namespace AppMAUI.Data
 
 
 
-    // *** CRUD pentru animale ***
-    /* public async Task<List<Animal>> GetAnimalsAsync()
-     {
-         var response = await _httpClient.GetAsync("animals");
-         if (response.IsSuccessStatusCode)
-         {
-             var content = await response.Content.ReadAsStringAsync();
-             return JsonConvert.DeserializeObject<List<Animal>>(content) ?? new List<Animal>();
-         }
-         return new List<Animal>();
-     }
+        // *** CRUD pentru animale ***
+        public async Task<List<Animal>> GetAnimalsAsync()
+        {
+            var response = await _httpClient.GetAsync("animals");
+            if (response.IsSuccessStatusCode)
+            {
+                var content = await response.Content.ReadAsStringAsync();
+                return JsonConvert.DeserializeObject<List<Animal>>(content) ?? new List<Animal>();
+            }
+            return new List<Animal>();
+        }
 
-     public async Task<Animal> GetAnimalByIdAsync(int id)
+        public async Task<Animal> GetAnimalByIdAsync(int id)
      {
          var response = await _httpClient.GetAsync($"animals/{id}");
          if (response.IsSuccessStatusCode)
@@ -91,62 +91,62 @@ namespace AppMAUI.Data
          return null;
      }
 
-     public async Task<bool> AddAnimalAsync(Animal animal)
-     {
-         var response = await _httpClient.PostAsJsonAsync("animals", animal);
-         return response.IsSuccessStatusCode;
-     }
+        public async Task<bool> AddAnimalAsync(Animal animal)
+        {
+            var response = await _httpClient.PostAsJsonAsync("animals", animal);
+            return response.IsSuccessStatusCode;
+        }
 
-     public async Task<bool> UpdateAnimalAsync(Animal animal)
-     {
-         var response = await _httpClient.PutAsJsonAsync($"animals/{animal.ID}", animal);
-         return response.IsSuccessStatusCode;
-     }
+        public async Task<bool> UpdateAnimalAsync(Animal animal)
+        {
+            var response = await _httpClient.PutAsJsonAsync($"animals/{animal.ID}", animal);
+            return response.IsSuccessStatusCode;
+        }
 
-     public async Task<bool> DeleteAnimalAsync(int id)
-     {
-         var response = await _httpClient.DeleteAsync($"animals/{id}");
-         return response.IsSuccessStatusCode;
-     }
-*/
-    // *** CRUD pentru clienți ***
-    /* public async Task<List<Client>> GetClientsAsync()
-     {
-         var response = await _httpClient.GetAsync("clients");
-         if (response.IsSuccessStatusCode)
+        public async Task<bool> DeleteAnimalAsync(int id)
+        {
+            var response = await _httpClient.DeleteAsync($"animals/{id}");
+            return response.IsSuccessStatusCode;
+        }
+
+        // *** CRUD pentru clienți ***
+        /* public async Task<List<Client>> GetClientsAsync()
          {
-             var content = await response.Content.ReadAsStringAsync();
-             return JsonConvert.DeserializeObject<List<Client>>(content) ?? new List<Client>();
+             var response = await _httpClient.GetAsync("clients");
+             if (response.IsSuccessStatusCode)
+             {
+                 var content = await response.Content.ReadAsStringAsync();
+                 return JsonConvert.DeserializeObject<List<Client>>(content) ?? new List<Client>();
+             }
+             return new List<Client>();
          }
-         return new List<Client>();
-     }
 
-     public async Task<Client> GetClientByIdAsync(int id)
-     {
-         var response = await _httpClient.GetAsync($"clients/{id}");
-         if (response.IsSuccessStatusCode)
+         public async Task<Client> GetClientByIdAsync(int id)
          {
-             return await response.Content.ReadFromJsonAsync<Client>();
+             var response = await _httpClient.GetAsync($"clients/{id}");
+             if (response.IsSuccessStatusCode)
+             {
+                 return await response.Content.ReadFromJsonAsync<Client>();
+             }
+             return null;
          }
-         return null;
-     }
 
-     public async Task<bool> AddClientAsync(Client client)
-     {
-         var response = await _httpClient.PostAsJsonAsync("clients", client);
-         return response.IsSuccessStatusCode;
-     }
+         public async Task<bool> AddClientAsync(Client client)
+         {
+             var response = await _httpClient.PostAsJsonAsync("clients", client);
+             return response.IsSuccessStatusCode;
+         }
 
-     public async Task<bool> UpdateClientAsync(Client client)
-     {
-         var response = await _httpClient.PutAsJsonAsync($"clients/{client.ID}", client);
-         return response.IsSuccessStatusCode;
-     }
+         public async Task<bool> UpdateClientAsync(Client client)
+         {
+             var response = await _httpClient.PutAsJsonAsync($"clients/{client.ID}", client);
+             return response.IsSuccessStatusCode;
+         }
 
-     public async Task<bool> DeleteClientAsync(int id)
-     {
-         var response = await _httpClient.DeleteAsync($"clients/{id}");
-         return response.IsSuccessStatusCode;
-     }*/
-}
+         public async Task<bool> DeleteClientAsync(int id)
+         {
+             var response = await _httpClient.DeleteAsync($"clients/{id}");
+             return response.IsSuccessStatusCode;
+         }*/
+    }
 }

@@ -7,7 +7,6 @@ namespace AppMAUI
         public static MauiApp CreateMauiApp()
         {
             var builder = MauiApp.CreateBuilder();
-
             builder
                 .UseMauiApp<App>()
                 .ConfigureFonts(fonts =>
@@ -19,9 +18,10 @@ namespace AppMAUI
             // Register services and pages
             builder.Services.AddSingleton<IRestService, RestService>();
             builder.Services.AddTransient<ProductPage>();
+            builder.Services.AddTransient<AnimalPage>();
 
             return builder.Build();
         }
-
     }
+
 }

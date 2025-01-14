@@ -17,17 +17,17 @@ namespace AppMAUI.Data
         Task<bool> DeleteProductAsync(int id);
 
         // Metode CRUD pentru animale
-       /* Task<List<Animal>> GetAnimalsAsync();
+        Task<List<Animal>> GetAnimalsAsync();
         Task<Animal> GetAnimalByIdAsync(int id);
         Task<bool> AddAnimalAsync(Animal animal);
         Task<bool> UpdateAnimalAsync(Animal animal);
-        Task<bool> DeleteAnimalAsync(int id);*/
+        Task<bool> DeleteAnimalAsync(int id);
 
         // Metode CRUD pentru clienți
-       /* Task<List<Client>> GetClientsAsync();
-        Task<Client> GetClientByIdAsync(int id);
-        Task<bool> AddClientAsync(Client client);
-        Task<bool> UpdateClientAsync(Client client);
-        Task<bool> DeleteClientAsync(int id);*/
+        /* Task<List<Client>> GetClientsAsync();
+         Task<Client> GetClientByIdAsync(int id);
+         Task<bool> AddClientAsync(Client client);
+         Task<bool> UpdateClientAsync(Client client);
+         Task<bool> DeleteClientAsync(int id);*/
     }
 }
