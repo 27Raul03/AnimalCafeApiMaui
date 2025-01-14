@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppMAUI.ClientPage"
+             Title="ClientPage">
+    <StackLayout Padding="10">
+        <Label Text="Clients" FontSize="Large" HorizontalOptions="Center" />
+        <ListView x:Name="ClientList" ItemSelected="OnClientSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding Name}" Detail="{Binding Email}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button Text="Add Client" Clicked="OnAddClientClicked" />
+    </StackLayout>
+</ContentPage>
