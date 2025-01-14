@@ -13,6 +13,10 @@
         <ShellContent Title="Products" 
                       ContentTemplate="{DataTemplate local:ProductPage}" 
                       Route="ProductPage" />
+        <ShellContent
+                      Title="Animals"
+                      ContentTemplate="{DataTemplate local:AnimalPage}"
+                      Route="AnimalPage" />
     </TabBar>
 
 </Shell>

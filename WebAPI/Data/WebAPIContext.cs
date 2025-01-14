@@ -15,5 +15,6 @@ namespace WebAPI.Data
         }
 
         public DbSet<WebAPI.Models.Product> Product { get; set; } = default!;
+        public DbSet<WebAPI.Models.Animal> Animal { get; set; } = default!;
     }
 }
