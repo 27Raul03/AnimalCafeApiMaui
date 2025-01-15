@@ -1,4 +1,6 @@
-﻿namespace AppMAUI
+﻿using AppMAUI.Data;
+
+namespace AppMAUI
 {
     public partial class App : Application
     {
@@ -6,7 +8,9 @@
         {
             InitializeComponent();
 
-            MainPage = new AppShell();
+            DependencyService.Register<IRestService, RestService>();
+
+            MainPage = new NavigationPage(new AppShell());
         }
     }
 }

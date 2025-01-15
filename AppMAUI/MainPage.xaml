@@ -7,7 +7,7 @@
         <Image
     Source="animal_cafe.png"
     Aspect="AspectFill"
-    Opacity="0.3"
+    Opacity="0.1"
     HorizontalOptions="FillAndExpand"
     VerticalOptions="FillAndExpand" />
 
@@ -16,16 +16,13 @@
     VerticalOptions="Center"
     Padding="30"
     Spacing="20"
-    BackgroundColor="#FFFFFF"
-    Opacity="0.7"
-    WidthRequest="300"
-    HeightRequest="250"
+
     >
 
             <Label
         Text="Welcome to Animal Cafe!"
         FontSize="28"
-        TextColor="#6D4C41"
+        TextColor="Wheat"
         FontAttributes="Bold"
         HorizontalTextAlignment="Center" />
 
