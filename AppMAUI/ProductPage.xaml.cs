@@ -1,5 +1,6 @@
 using AppMAUI.Models;
 using AppMAUI.Data;
+using Plugin.LocalNotification;
 
 namespace AppMAUI
 {
@@ -43,6 +44,7 @@ namespace AppMAUI
                 if (await _restService.AddProductAsync(product))
                 {
                     await DisplayAlert("Success", "Product added successfully!", "OK");
+                    
                     LoadProducts();
                 }
             }
@@ -88,6 +90,18 @@ namespace AppMAUI
                 if (await _restService.UpdateProductAsync(product))
                 {
                     await DisplayAlert("Success", "Product updated successfully!", "OK");
+                    var notification = new Plugin.LocalNotification.NotificationRequest
+                    {
+                        NotificationId = 1001,
+                        Title = "Product Added",
+                        Description = $"The product '{product.Name}' was edited successfully!",
+                        Schedule = new NotificationRequestSchedule
+                        {
+                            NotifyTime = DateTime.Now.AddSeconds(5),
+                            RepeatType = NotificationRepeat.No
+                        }
+                    };
+                    _ = LocalNotificationCenter.Current.Show(notification);
                     LoadProducts();
                 }
                 else

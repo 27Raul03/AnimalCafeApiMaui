@@ -1,4 +1,5 @@
 ﻿using AppMAUI.Data;
+using Plugin.LocalNotification;
 
 namespace AppMAUI
 {
@@ -15,11 +16,11 @@ namespace AppMAUI
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 });
 
-            // Register services and pages
             builder.Services.AddSingleton<IRestService, RestService>();
             builder.Services.AddTransient<ProductPage>();
             builder.Services.AddTransient<AnimalPage>();
             builder.Services.AddTransient<ClientPage>();
+            builder.UseLocalNotification();
 
             return builder.Build();
         }
