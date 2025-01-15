@@ -3,44 +3,15 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AppMAUI.ProductPage"
              Title="ProductPage">
-    <VerticalStackLayout Padding="10" Spacing="15">
-
-        <!-- ListView pentru afișarea produselor -->
-        <Button
-     Text="Load Products"
-     BackgroundColor="#4CAF50"
-     TextColor="White"
-     FontAttributes="Bold"
-     CornerRadius="10"
-     Padding="10,5"
-     HorizontalOptions="Center"
-     WidthRequest="150"
-     Clicked="OnLoadProductsClicked" />
-
-        <ListView x:Name="ProductList" SelectionMode="Single">
+    <StackLayout Padding="10">
+        <Label Text="Products" FontSize="Large" HorizontalOptions="Center" />
+        <ListView x:Name="ProductList" ItemSelected="OnProductSelected">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <ViewCell>
-                        <StackLayout Orientation="Horizontal" Padding="10">
-                            <Label Text="{Binding Name}" FontSize="20" WidthRequest="150" />
-                            <Label Text="{Binding Price, StringFormat='{0:C}'}" FontSize="20" WidthRequest="100" TextColor="Green" />
-                            <Label Text="{Binding Description}" FontSize="18" WidthRequest="200" TextColor="Gray" />
-                        </StackLayout>
-                    </ViewCell>
+                    <TextCell Text="{Binding Name}" Detail="{Binding Price, StringFormat='Price: {0:C}'}" />
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-        <!-- Secțiunea pentru adăugare de produse -->
-        <StackLayout Padding="10" Spacing="10">
-            <Entry x:Name="nameEntry" Placeholder="Nume produs" />
-            <Entry x:Name="priceEntry" Placeholder="Preț" Keyboard="Numeric" />
-            <Entry x:Name="categoryEntry" Placeholder="Categorie" />
-            <Button Text="Adaugă Produs" Clicked="OnAddProductClicked" />
-        </StackLayout>
-
-        <!-- Buton pentru ștergerea produsului selectat -->
-        <Button Text="Șterge Produs Selectat" Clicked="OnDeleteProductClicked" />
-
- 
-    </VerticalStackLayout>
+        <Button Text="Add Product" Clicked="OnAddProductClicked" />
+    </StackLayout>
 </ContentPage>

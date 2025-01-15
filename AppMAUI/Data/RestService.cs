@@ -13,7 +13,7 @@ namespace AppMAUI.Data
     {
         private readonly HttpClient _httpClient;
 
-        private const string BaseUrl = "https://localhost:7144/api/Products"; // Replace with your API URL
+        private const string BaseUrl = "https://localhost:7144/api/Products"; 
 
         public RestService()
         {
@@ -52,8 +52,11 @@ namespace AppMAUI.Data
         public async Task<bool> AddProductAsync(Product product)
         {
             var response = await _httpClient.PostAsJsonAsync("products", product);
+            var content = await response.Content.ReadAsStringAsync();
+            Console.WriteLine($"[DEBUG] AddProductAsync Response: {response.StatusCode} - {content}");
             return response.IsSuccessStatusCode;
         }
+
 
         public async Task<bool> UpdateProductAsync(Product product)
         {
