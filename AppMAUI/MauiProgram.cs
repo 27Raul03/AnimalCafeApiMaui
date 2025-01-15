@@ -1,4 +1,5 @@
 ﻿using AppMAUI.Data;
+using Plugin.LocalNotification;
 
 namespace AppMAUI
 {
@@ -20,6 +21,7 @@ namespace AppMAUI
             builder.Services.AddTransient<ProductPage>();
             builder.Services.AddTransient<AnimalPage>();
             builder.Services.AddTransient<ClientPage>();
+            builder.UseLocalNotification();
 
             return builder.Build();
         }
