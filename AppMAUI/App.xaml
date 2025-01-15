@@ -4,7 +4,6 @@
              x:Class="AppMAUI.App">
     <Application.Resources>
         <ResourceDictionary>
-            <!-- Ensure these files exist -->
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Resources/Styles/Colors.xaml" />
                 <ResourceDictionary Source="Resources/Styles/Styles.xaml" />

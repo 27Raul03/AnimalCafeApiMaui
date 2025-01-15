@@ -10,7 +10,7 @@ namespace AppMAUI
 
             DependencyService.Register<IRestService, RestService>();
 
-            MainPage = new NavigationPage(new AppShell());
+            MainPage = new AppShell();
         }
     }
 }

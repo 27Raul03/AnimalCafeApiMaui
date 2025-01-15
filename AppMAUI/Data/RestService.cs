@@ -72,7 +72,7 @@ namespace AppMAUI.Data
 
 
 
-        // *** CRUD pentru animale ***
+        // CRUD pentru animale
         public async Task<List<Animal>> GetAnimalsAsync()
         {
             var response = await _httpClient.GetAsync("animals");
@@ -112,7 +112,7 @@ namespace AppMAUI.Data
             return response.IsSuccessStatusCode;
         }
 
-        // *** CRUD pentru clienți ***
+        //  CRUD pentru clienti 
         public async Task<List<Client>> GetClientsAsync()
         {
             var response = await _httpClient.GetAsync("clients");

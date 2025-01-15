@@ -8,6 +8,9 @@
     Title="AnimalCafeApiMaui">
 
     <TabBar>
+        <ShellContent 
+    Route="LoginPage" 
+    ContentTemplate="{DataTemplate local:LoginPage}" />
         <ShellContent Title="Home" 
                       ContentTemplate="{DataTemplate local:MainPage}" 
                       Route="MainPage" />
