@@ -77,6 +77,7 @@ namespace AppMAUI
             {
                 product.Name = await DisplayPromptAsync("Edit Product", "Enter new name:", initialValue: product.Name);
                 product.Description = await DisplayPromptAsync("Edit Product", "Enter new description:", initialValue: product.Description);
+                product.Category = await DisplayPromptAsync("Edit Product", "Enter new category:", initialValue: product.Category);
 
                 var priceInput = await DisplayPromptAsync("Edit Product", "Enter new price:", initialValue: product.Price.ToString());
                 if (int.TryParse(priceInput, out var newPrice))
@@ -89,12 +90,17 @@ namespace AppMAUI
                     await DisplayAlert("Success", "Product updated successfully!", "OK");
                     LoadProducts();
                 }
+                else
+                {
+                    await DisplayAlert("Error", "Failed to update product.", "OK");
+                }
             }
             catch (Exception ex)
             {
                 await DisplayAlert("Error", $"Failed to edit product: {ex.Message}", "OK");
             }
         }
+
 
         private async Task DeleteProduct(Product product)
         {
